@@ -17,20 +17,24 @@
         }
 
 ---
+
 * Possibly using Mockito (or your favorite mocking library)
 
-    public class InvoiceManagerTest {
-        @ClassUnderTest private InvoiceManager manager;
-        @Dependency
-        @Mock
-        private InvoiceCalculator invoiceCalculator;
-        @Dependency
-        @Mock
-        private InvoiceDao invoiceDao;
-    	@Before public void setup() {
-            MockitoAnnotations.init(this); 
-    		manager = new InvoiceManager();
-    		Otasco.init(this);
-    	}
-    }
+        public class InvoiceManagerTest {
+            @ClassUnderTest private InvoiceManager manager;
+			
+            @Dependency
+            @Mock
+            private InvoiceCalculator invoiceCalculator;
+			
+            @Dependency
+            @Mock
+            private InvoiceDao invoiceDao;
+			
+        	@Before public void setup() {
+                MockitoAnnotations.init(this); 
+        		manager = new InvoiceManager();
+        		Otasco.init(this);
+        	}
+        }
     
