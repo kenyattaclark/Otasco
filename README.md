@@ -2,18 +2,18 @@
 * Makes the test class more readable.
 
         public class InvoiceManagerTest { 
-            @ClassUnderTest private InvoiceManager manager;
+    	    @ClassUnderTest private InvoiceManager manager;
             
-            @Dependency private InvoiceCalculator invoiceCalculator;
+        	@Dependency private InvoiceCalculator invoiceCalculator;
             
-            @Dependency private InvoiceDao invoiceDao;
+    	    @Dependency private InvoiceDao invoiceDao;
             
-            @Before public void setup() {
-                    invoiceCalculator = new InvoiceCalculator();
-                    invoiceDao = new InvoiceDao();
-                    manager = new InvoiceManager();
-                    Otasco.init(this);
-            }
+    	    @Before public void setup() {
+    		    invoiceCalculator = new InvoiceCalculator();
+    		    invoiceDao = new InvoiceDao();
+    		    manager = new InvoiceManager();
+    		    Otasco.init(this);
+      	    }
         }
 
 ---
@@ -22,16 +22,16 @@
 
         public class InvoiceManagerTest {
             @ClassUnderTest private InvoiceManager manager;
-                        
+			
             @Dependency
             @Mock
             private InvoiceCalculator invoiceCalculator;
-                        
+			
             @Dependency
             @Mock
             private InvoiceDao invoiceDao;
-                        
-            @Before public void setup() {
+			
+        	@Before public void setup() {
                 MockitoAnnotations.init(this); 
                 manager = new InvoiceManager();
                 Otasco.init(this);
