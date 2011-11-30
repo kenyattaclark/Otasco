@@ -1,6 +1,6 @@
 * Allows testing class under test without creating useless setters for dependencies.
 * Makes the test class more readable.
-```
+
     public class InvoiceManagerTest { 
      	  
     	@ClassUnderTest private InvoiceManager manager; 	  
